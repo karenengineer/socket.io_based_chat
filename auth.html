@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm">
+    <script src="socket.io/socket.io.js"></script>
+    <title>Chat</title>
+    <style>
+        body {
+            overflow: hidden;
+            background-color: rgb(212 ,219, 226);
+        }
+
+        #username {
+            display: inline-block;
+        }
+        .col-md-12 {
+            text-align: center;
+        }
+        .wrap {
+            width: 500px;
+            display: inline-block;
+            margin-top: 350px;
+        }
+    </style>
+    <script>
+    window.onload = () => {
+        let btn = document.getElementsByTagName('button')[0];
+        let inp = document.getElementsByTagName('input')[0];
+
+        btn.onclick = () => {
+            if (inp.value == '') {
+                alert ('invalid username ! try again!');
+                return;
+                
+            }
+            window.location.href = '/' + inp.value;
+        }
+    }
+        </script>
+</head>
+<body>
+    <div class="row">
+        <div class="col=md=12">
+            <div class="wrap">
+                <h1>Ignite chat!</h1>
+                <div class="input-group">
+                    <input type="text" class="input-lg form-control" id="username" placeholder="Username..."/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-lg btn-warning">Connect</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
