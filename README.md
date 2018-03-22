@@ -1,3 +1,3 @@
 # socket.io_based_chat
-npm install --save
-node main.js
+##npm install --save
+##node main.js
